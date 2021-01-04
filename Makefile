@@ -6,7 +6,7 @@
 #    By: hnoh <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/03 10:36:44 by hnoh              #+#    #+#              #
-#    Updated: 2021/01/04 12:28:16 by hnoh             ###   ########.fr        #
+#    Updated: 2021/01/04 13:25:56 by hnoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,29 +43,42 @@ SRCS		=	ft_isalnum.c	\
 				ft_putchar_fd.c	\
 				ft_putstr_fd.c	\
 				ft_putendl_fd.c	\
-				ft_putnbr_fd.c	\
-				ft_lstnew.c		\
-
+				ft_putnbr_fd.c
 
 OBJS		=	$(SRCS:.c=.o)
 
+BONUS		=	ft_lstnew.c		\
+				ft_lstadd_front.c\
+				ft_lstsize.c	\
+				ft_lstlast.c	\
+				ft_lstadd_back.c\
+				ft_lstdelone.c	\
+				ft_lstclear.c	\
+				ft_lstiter.c	\
+				ft_lstmap.c
+
+BONUS_OBJS	=	$(BONUS:.c=.o)
+
 CC			= 	gcc
 RM			=	rm -f
-AR			=	ar rcs
 CFLAGS		=	-Wall -Wextra -Werror -I.
 
 NAME		=	libft.a
 
 all:		$(NAME)
+
 $(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
+			ar rcs $(NAME) $(OBJS)
 
 clean:		
-			$(RM) $(OBJS)
+			$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean $(NAME)
 
-.PHONY:		all clean fclean re
+bonus:		$(OBJS) $(BONUS_OBJS)
+			ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY:		all clean fclean re bonus
