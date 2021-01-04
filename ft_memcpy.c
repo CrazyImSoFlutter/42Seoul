@@ -6,7 +6,7 @@
 /*   By: hnoh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/03 13:42:11 by hnoh              #+#    #+#             */
-/*   Updated: 2021/01/03 13:47:59 by hnoh             ###   ########.fr       */
+/*   Updated: 2021/01/04 11:27:44 by nogeun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	dest = (char *)dst;
 	source = (char *)src;
-	if(!dst && !src)
+	if (!dst && !src)
 		return (dst);
 	while (n--)
 		*dest++ = *source++;

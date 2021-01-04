@@ -6,7 +6,7 @@
 #    By: hnoh <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/03 10:36:44 by hnoh              #+#    #+#              #
-#    Updated: 2021/01/04 10:29:12 by hnoh             ###   ########.fr        #
+#    Updated: 2021/01/04 12:28:16 by hnoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,17 @@ SRCS		=	ft_isalnum.c	\
 				ft_memcmp.c		\
 				ft_calloc.c		\
 				ft_strdup.c		\
-
+				ft_substr.c		\
+				ft_strjoin.c	\
+				ft_strtrim.c	\
+				ft_split.c		\
+				ft_itoa.c		\
+				ft_strmapi.c	\
+				ft_putchar_fd.c	\
+				ft_putstr_fd.c	\
+				ft_putendl_fd.c	\
+				ft_putnbr_fd.c	\
+				ft_lstnew.c		\
 
 
 OBJS		=	$(SRCS:.c=.o)
