@@ -6,7 +6,7 @@
 /*   By: hnoh <hnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 12:03:23 by hnoh              #+#    #+#             */
-/*   Updated: 2021/01/03 13:27:20 by hnoh             ###   ########.fr       */
+/*   Updated: 2021/01/04 10:31:43 by hnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,11 @@ char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *big, const char *little, size_t length);
 void		*ft_memset(void *dest, int c, size_t len);
 void		ft_bzero(void *s, size_t i);
+void		*ft_memcpy(void *dst, const void *src, size_t n);
+void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
+int			ft_memcmp(const void *s1, const void *s2, size_t n);
+void		*ft_calloc(size_t count, size_t size);
+char		*ft_strdup(const char *s);
 
 #endif
