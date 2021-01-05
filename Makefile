@@ -6,7 +6,7 @@
 #    By: hnoh <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/03 10:36:44 by hnoh              #+#    #+#              #
-#    Updated: 2021/01/04 13:25:56 by hnoh             ###   ########.fr        #
+#    Updated: 2021/01/05 18:36:47 by nogeun           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ SRCS		=	ft_isalnum.c	\
 				ft_putchar_fd.c	\
 				ft_putstr_fd.c	\
 				ft_putendl_fd.c	\
-				ft_putnbr_fd.c
+				ft_putnbr_fd.c	\
 
 OBJS		=	$(SRCS:.c=.o)
 
@@ -55,7 +55,7 @@ BONUS		=	ft_lstnew.c		\
 				ft_lstdelone.c	\
 				ft_lstclear.c	\
 				ft_lstiter.c	\
-				ft_lstmap.c
+				ft_lstmap.c		\
 
 BONUS_OBJS	=	$(BONUS:.c=.o)
 
