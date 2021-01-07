@@ -6,7 +6,7 @@
 /*   By: hnoh <hnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 12:03:23 by hnoh              #+#    #+#             */
-/*   Updated: 2021/01/07 11:53:31 by hnoh             ###   ########.fr       */
+/*   Updated: 2021/01/07 12:00:42 by hnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_isspace(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 size_t				ft_strlen(const char *s);

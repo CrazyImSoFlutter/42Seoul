@@ -6,7 +6,7 @@
 #    By: hnoh <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/03 10:36:44 by hnoh              #+#    #+#              #
-#    Updated: 2021/01/07 11:40:18 by hnoh             ###   ########.fr        #
+#    Updated: 2021/01/07 12:00:13 by hnoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRCS		=	ft_isalnum.c	\
 				ft_isascii.c	\
 				ft_isalpha.c	\
 				ft_isdigit.c	\
+				ft_isspace.c	\
 				ft_atoi.c		\
 				ft_toupper.c	\
 				ft_tolower.c	\
