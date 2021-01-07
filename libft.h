@@ -6,7 +6,7 @@
 /*   By: hnoh <hnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 12:03:23 by hnoh              #+#    #+#             */
-/*   Updated: 2021/01/07 12:00:42 by hnoh             ###   ########.fr       */
+/*   Updated: 2021/01/07 13:18:42 by hnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ size_t				ft_strlen(const char *s);
 size_t				ft_strnlen(const char *s, size_t maxlen);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dsst, const char *src, size_t dstsize);
+char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *big, const char *little,
