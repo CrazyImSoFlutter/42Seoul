@@ -6,7 +6,7 @@
 /*   By: hnoh <hnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 12:03:23 by hnoh              #+#    #+#             */
-/*   Updated: 2021/01/05 18:44:10 by nogeun           ###   ########.fr       */
+/*   Updated: 2021/01/07 11:53:31 by hnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 size_t				ft_strlen(const char *s);
+size_t				ft_strnlen(const char *s, size_t maxlen);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dsst, const char *src, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
@@ -52,6 +53,7 @@ void				*ft_calloc(size_t count, size_t size);
 char				*ft_substr(char const *s, unsigned int start,
 				size_t len);
 char				*ft_strdup(const char *s);
+char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);

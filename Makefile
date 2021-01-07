@@ -6,7 +6,7 @@
 #    By: hnoh <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/03 10:36:44 by hnoh              #+#    #+#              #
-#    Updated: 2021/01/05 18:36:47 by nogeun           ###   ########.fr        #
+#    Updated: 2021/01/07 11:40:18 by hnoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS		=	ft_isalnum.c	\
 				ft_toupper.c	\
 				ft_tolower.c	\
 				ft_strlen.c		\
+				ft_strnlen.c	\
 				ft_strlcpy.c	\
 				ft_strlcat.c	\
 				ft_strchr.c		\
@@ -34,6 +35,7 @@ SRCS		=	ft_isalnum.c	\
 				ft_memcmp.c		\
 				ft_calloc.c		\
 				ft_strdup.c		\
+				ft_strndup.c	\
 				ft_substr.c		\
 				ft_strjoin.c	\
 				ft_strtrim.c	\

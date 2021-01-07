@@ -5,78 +5,74 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hnoh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 10:59:40 by hnoh              #+#    #+#             */
-/*   Updated: 2021/01/04 11:10:18 by hnoh             ###   ########.fr       */
+/*   Created: 2021/01/07 11:16:00 by hnoh              #+#    #+#             */
+/*   Updated: 2021/01/07 11:27:18 by hnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_word_count(char const *s, char c)
+static size_t	ft_wordcount(char const *s, char c)
 {
-	int	i;
-	int	count;
+	char	flag;
+	size_t	count;
 
+	if (!s)
+		return (0);
 	count = 0;
-	if (s[0] && s[0] != c)
-		count++;
-	i = 0;
-	while (i < (int)ft_strlen(s))
+	flag = 1;
+	while (*s)
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1])
-			count++;
-		i++;
+		if (*s == c)
+			flag = 1;
+		else
+		{
+			(flag == 1) ? count++ : count;
+			flag = 0;
+		}
+		s++;
 	}
 	return (count);
 }
 
-static char		*ft_segment(char const *s, char c, int i)
+static void		ft_free(char **ret)
 {
-	int		j;
-	int		k;
-	char	*strings;
+	int		i;
 
-	j = i;
-	while (s[i] && s[i] != c)
-		i++;
-	strings = (char *)malloc(sizeof(char) * ((i - j) + 1));
-	if (!strings)
-		return (NULL);
-	k = 0;
-	while (j != i)
+	i = 0;
+	while (ret[i])
 	{
-		strings[k] = s[j];
-		k++;
-		j++;
+		free(ret[i]);
+		i++;
 	}
-	strings[k] = '\0';
-	return (strings);
+	free(ret);
 }
 
 char			**ft_split(char const *s, char c)
 {
-	char	**array;
-	int		i;
-	int		j;
+	const size_t	wordcnt = ft_wordcount(s, c);
+	const char		*p = s;
+	char			**ret;
+	char			*end;
+	size_t			i;
 
-	if (!s)
-		return (NULL);
-	array = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
-	if (!array)
+	if (!s || !(ret = ft_calloc(wordcnt + 1, sizeof(char *))))
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (i <= (int)ft_strlen(s) && ft_word_count(s, c))
+	while (i < wordcnt)
 	{
-		if (ft_strlen(ft_segment(s, c, i)))
+		if (*s != c)
 		{
-			array[j] = ft_segment(s, c, i);
-			i += (ft_strlen(array[j]) + 1);
-			j++;
+			if (!(end = ft_strchr(s, c)))
+				end = (char *)p + ft_strlen(p);
+			if (!(ret[i++] = ft_strndup(s, end - s)))
+			{
+				ft_free(ret);
+				return (NULL);
+			}
+			s = end;
 		}
-		else
-			i++;
+		s++;
 	}
-	array[j] = NULL;
-	return (array);
+	return (ret);
 }
